@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson2</title>
+    <!-- Пріоритетність буде залежати від того де прозміщений запис:
+         все що нижче - пріоритетніше ніж усе що вище
+         типу новіший код важливіший бо ми пишемо зверху вниз
+        
+        
+        але є така штука як important - якщо її прописати у зовнішньому стилі - він перебьє усі інші стилі-->
+    <!-- 2) ГЛОБАЛЬНИЙ СТИЛЬ,
+             мінус - теж засмічує html структуру
+             використовують до прикладу для строрінок в розсилках, бо при розсилці не може бути 2 файли-->
+    <style>
+        h1 {
+            color: blueviolet;
+            background-color: blue;
+        }
+
+        h2 {
+            color: white;
+            background-color: crimson;
+        }
+
+        h4 {
+            color: fuchsia;
+            background-color: purple;
+            font-size: 30px;
+            text-align: right;
+        }
+    </style>
+    <!-- ЗОВНІШНІ СТИЛІ - підключаються через лінк у хеді
+          -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 1) ВБУДОВАНИЙ СТИЛЬ - перебиває глобальні (має найбільший пріоритет) і сторонні,
+            мінус - засмічує  html структуру -->
+    <h1 style="color:rgba(101, 162, 211, 1); background-color: yellow;">Big title</h1>
+    <h1>One more big title</h1>
+    <h2>Medium title</h2>
+    <h3 style="color: green; background-color: rgb(222, 194, 152);font-size: 12px; text-align: center;">H3 medium title
+        inputed style</h3>
+    <h4>h4 smaller title global style</h4>
+    <h5> h5 title outer style</h5>
+    <!-- -------------------------------------------------------- -->
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p style="color: cyan;" id="loremText">Lorem ipsum dolor sit amet.</p>
+    <p class="loremText redText">Lorem ipsum dolor sit amet.</p>
+    <hr>
+
+    <div class="box">
+        Lorem300
+    </div>
+    <span class="text">some text</span>
+</body>
+
+</html>

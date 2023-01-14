@@ -1,0 +1,102 @@
+/* cбрасываем стили */
+/* "*" = обращение ко всем єлементам сразу */
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing - указывает на поведение сблока. По дефолту стоит content-box (блок увеличивается относительно контента */
+    /* border-box  -  сохраняет фактические размері которіе ві задали*/
+    box-sizing: border-box;
+
+
+}
+
+
+h2{
+    color: burlywood;
+    background-color: black;
+    text-align: right;
+    font-size: 22px;
+}
+h5{
+    color: black;
+    background-color: aquamarine;
+    text-align: start;
+    text-decoration: line-through;
+}
+
+
+p{
+    color: coral;
+}
+
+#loremText {
+    /* color: chartreuse !important; */
+    color: chartreuse;
+}
+
+.loremText{
+    color: darkgreen;
+}
+
+.redText{
+    color: red;
+}
+
+
+/* .box, .text{
+    width: 200px;
+    height: 200px;
+    background-color: darkcyan;
+    /* display: inline; */
+    /* display: block; */
+/* }  */
+
+.box{
+    width: 200px;
+    min-height: 200px;
+    background-color: darkcyan;
+    /* (выравнивание по оси х) */
+    /* text-align: center; */
+    /* выравнивание по оси у но лучше использовать флексы */
+    /* line-height: 200px; */
+    /* transform: rotate(35deg); */
+    /* scale работает как зум (фактически размер не увеличивается) */
+    /* трансформ прописанній дважді будет перебиваться тем которій описан ниже в связи с приоритетностью записи */
+    /* transform: scale(1.5); */
+
+    /* если мі хотим написать несколько значений трансформа - пишем все показатели в одну строку через пробел*/
+    /* transform: rotate(35deg) scale(1.5); */
+/*  skew - искажает по осям , кстати значение может біть отрицательнім */
+    /* transform: skew(40deg); */
+    /* translate - изменяет точку от которой будет происходить посмтроение элемента  */
+    /* transform: translateY(-40px); */
+
+    /* margin: ; - внешний отступ, padding: ; - внутренний отступ */
+    /* margin-top: ;
+    margin-right: ;
+    margin-bottom: ;
+    margin-left: ; */
+    /* margin: 40px; - сделает отступ єлемента относительно всех сторон по 40 пикселей  */
+    /* margin: 40px; */
+    /* margin: 80px 60px 40px 20px; (тут будет отступ: 80px top, 60px right, 40px bottom, 20px left ) */
+    /* margin: 80px 60px 40px; */
+    margin: 80px 60px;
+    /* padding-top: ;
+    padding-right: ;
+    padding-bottom: ;
+    padding-left: ; */
+    /* проблемма padding  в том что они накапливают фактический размер єлемента к которому они применяются. */
+    /* в нашем случае єлемент div  увеличился с 200х200 до 240х240 и єто плохо */
+    /* что бы этого не случалось надо сбрасывать стили */
+    padding: 20px;
+}
+
+.text{
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    /* display block - изменит поведение рядкового елемента и сделает его как блочный */
+    /* display: block; */
+    text-align: right;
+    transform: rotate(35deg);
+}
